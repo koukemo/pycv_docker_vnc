@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  pycv2:
+    build: 
+      context: .
+    container_name: pycv2
+    ports:
+      - 6080:80
+    volumes: 
+      - /dev/shm:/dev/shm
+      - ./app:/root/app
+    tty: true
